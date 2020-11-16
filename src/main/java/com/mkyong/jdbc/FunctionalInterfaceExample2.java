@@ -4,7 +4,8 @@ package com.mkyong.jdbc;
 interface sayable{
 	//void say(String msg);	// abstract method
 	// It can contain any number of Object class methods.
-     void say1(String msg);
+  //   void say1(String msg);
+     public abstract void show(int i);
 	int hashCode();
 	String toString();
 	boolean equals(Object obj);
@@ -19,5 +20,11 @@ public class FunctionalInterfaceExample2 implements sayable{
 		FunctionalInterfaceExample2 fie = new FunctionalInterfaceExample2();
 		fie.say("Hello there");
         fie.say1("Hello there");
+        	fie.say1("TEN");
+	}
+	@Override
+	public void show(int i) {
+		System.out.println(10);
+		
 	}
 }
